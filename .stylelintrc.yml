@@ -1,0 +1,10 @@
+# https://stylelint.io
+  
+syntax:
+  - scss
+
+extends:
+  - "@nekohack/stylelint-config"
+
+rules:
+  "no-descending-specificity": null

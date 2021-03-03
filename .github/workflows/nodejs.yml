@@ -1,0 +1,58 @@
+name: Publish to release branch
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14.x'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: _cache_npm_node12
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Unit Test
+        run: |
+          npm install
+          npm run test:unit
+        env:
+          CI: true
+
+      - name: Transpile
+        run: |
+          npm install
+          npm run bundle
+        env:
+          CI: true
+
+      - name: Publish
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # ssh-keygen -t rsa -b 4096 -f gh-pages >> gh-pages.pub in deploy keys, gh-pages in secrets
+          deploy_key: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
+          external_repository: jiyuujin/profile-ui
+          PUBLISH_BRANCH: release
+          PUBLISH_DIR: ./dist

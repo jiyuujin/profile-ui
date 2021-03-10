@@ -1,4 +1,4 @@
-# j-stylebook
+# profile-ui
 
 A stable UI components for Web in Vue2
 

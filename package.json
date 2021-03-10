@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A Vue2 UI components for Web",
   "private": false,
-  "main": "dist/j-stylebook.common.js",
-  "unpkg": "./dist/j-stylebook.umd.min.js",
-  "jsdelivr": "./dist/j-stylebook.umd.min.js",
+  "main": "dist/profile-ui.common.js",
+  "unpkg": "./dist/profile-ui.umd.min.js",
+  "jsdelivr": "./dist/profile-ui.umd.min.js",
   "typings": "./dist/types/index.d.ts",
   "files": [
     "dist"

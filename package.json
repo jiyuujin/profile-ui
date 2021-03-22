@@ -28,7 +28,7 @@
     "build-storybook": "cross-env NODE_ENV=production vue-cli-service storybook:build -c config/storybook",
     "build-lib": "cross-env BUILD_TARGET=lib vue-cli-service build --target lib --name profile-ui ./src/components/index.ts",
     "build-type": "tsc --emitDeclarationOnly --declaration -P tsconfig.prod.json",
-    "bundle": "rm -rf dist/ && run-s build-lib build-type",
+    "build": "rm -rf dist/ && run-s build-lib build-type",
     "eslint": "eslint ./ --ext vue,ts",
     "eslint:fix": "eslint ./ --ext vue,ts --fix",
     "stylelint": "stylelint --config .stylelintrc.yml './src/components/**/*.scss' './src/components/**/*.vue'",

@@ -11,12 +11,13 @@
 }
 
 .profile-icon {
-  margin-right: 30px;
+  margin: 0 auto;
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+  max-width: 600px;
 
   &_image {
     align-items: center;
@@ -58,6 +59,7 @@
 
 @media (max-width: 735px) {
   .profile {
+    padding: 4px 8px;
     flex-direction: column;
   }
 

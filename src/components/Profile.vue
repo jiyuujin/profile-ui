@@ -32,15 +32,16 @@ export default {
       default: ''
     }
   },
-  methods: {
-    toggle() {
+  setup() {
+    const toggle = () => {
       const navEl = document.querySelector('.header-nav')
       navEl.classList.toggle('menu_active')
     }
+    return { toggle }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/profile';
+@import '../assets/profile.scss';
 </style>

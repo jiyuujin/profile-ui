@@ -2186,9 +2186,7 @@ Profilevue_type_script_lang_ts.__scopeId = "data-v-66b41794"
 /* harmony default export */ var Profile = (Profilevue_type_script_lang_ts);
 ;// CONCATENATED MODULE: ./src/components/profile.ts
 
-var profileComponents = {
-  Profile: Profile
-};
+
 ;// CONCATENATED MODULE: ./src/components/index.ts
 
 
@@ -2201,7 +2199,7 @@ var profileComponents = {
    */
   install: function install(app, options) {
     // eslint-disable-line no-unused-vars
-    var list = [profileComponents];
+    var list = [Profile];
 
     for (var _i = 0, _list = list; _i < _list.length; _i++) {
       var cs = _list[_i];

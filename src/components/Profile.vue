@@ -13,22 +13,22 @@
       <ul class="info-social">
         <li v-if="discordUrl">
           <a :href="discordUrl" target="_blank" rel="noopener noreferrer">
-            <img alt="discord logo" src="@/assets/discord_logo.svg" />
+            <DiscordSvg />
           </a>
         </li>
         <li v-if="githubUrl">
           <a :href="githubUrl" target="_blank" rel="noopener noreferrer">
-            <img alt="github logo" src="@/assets/github_logo.svg" />
+            <GithubSvg />
           </a>
         </li>
         <li v-if="twitterUrl">
           <a :href="twitterUrl" target="_blank" rel="noopener noreferrer">
-            <img alt="twitter logo" src="@/assets/twitter_logo.svg" />
+            <TwitterSvg />
           </a>
         </li>
         <li v-if="instagramUrl">
           <a :href="instagramUrl" target="_blank" rel="noopener noreferrer">
-            <img alt="instagram logo" src="@/assets/instagram_logo.svg" />
+            <InstagramSvg />
           </a>
         </li>
       </ul>
@@ -39,6 +39,11 @@
 <script lang="ts">
 import { PropType } from 'vue'
 
+import DiscordSvg from '@/assets/discord_logo.svg'
+import GithubSvg from '@/assets/github_logo.svg'
+import TwitterSvg from '@/assets/twitter_logo.svg'
+import InstagramSvg from '@/assets/instagram_logo.svg'
+
 type SocialProps = {
   discord?: string
   github?: string
@@ -47,6 +52,12 @@ type SocialProps = {
 }
 
 export default {
+  components: {
+    DiscordSvg,
+    GithubSvg,
+    TwitterSvg,
+    InstagramSvg
+  },
   props: {
     image: {
       type: String as PropType<string>,

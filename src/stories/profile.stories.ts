@@ -25,6 +25,12 @@ storiesOf('Profile', module).add('Normal', () => ({
             :image="image"
             name="soranchu"
             description="Japanese Aviation Photographer 🇯🇵<br>All my own pics, kindly credit me in any reposts 👍🏼"
+            :social="{
+              discord: 'https://discord.gg/B86cWtfr8U',
+              github: 'https://github.com/jiyuujin',
+              twitter: 'https://twitter.com/jiyuujinlab',
+              instagram: 'https://instagram.com/sarasakoffee'
+            }"
           />
         </div>
       </div>

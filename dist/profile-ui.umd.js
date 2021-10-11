@@ -7,7 +7,7 @@
 		exports["profile-ui"] = factory(require("vue"));
 	else
 		root["profile-ui"] = factory(root["Vue"]);
-})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__3507__) {
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__7203__) {
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -1906,11 +1906,30 @@ hiddenKeys[HIDDEN] = true;
 
 /***/ }),
 
-/***/ 3507:
+/***/ 3744:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+var __webpack_unused_export__;
+
+__webpack_unused_export__ = ({ value: true });
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports.Z = (sfc, props) => {
+    for (const [key, val] of props) {
+        sfc[key] = val;
+    }
+    return sfc;
+};
+
+
+/***/ }),
+
+/***/ 7203:
 /***/ (function(module) {
 
 "use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__3507__;
+module.exports = __WEBPACK_EXTERNAL_MODULE__7203__;
 
 /***/ })
 
@@ -2024,11 +2043,11 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
+;// CONCATENATED MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
 function _arrayWithHoles(arr) {
   if (Array.isArray(arr)) return arr;
 }
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
+;// CONCATENATED MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
 function _iterableToArrayLimit(arr, i) {
   var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
 
@@ -2058,7 +2077,7 @@ function _iterableToArrayLimit(arr, i) {
 
   return _arr;
 }
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+;// CONCATENATED MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
 function _arrayLikeToArray(arr, len) {
   if (len == null || len > arr.length) len = arr.length;
 
@@ -2068,7 +2087,7 @@ function _arrayLikeToArray(arr, len) {
 
   return arr2;
 }
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+;// CONCATENATED MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
@@ -2078,11 +2097,11 @@ function _unsupportedIterableToArray(o, minLen) {
   if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
+;// CONCATENATED MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
-;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+;// CONCATENATED MODULE: ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js
 
 
 
@@ -2099,14 +2118,16 @@ var es_symbol = __webpack_require__(2526);
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.symbol.description.js
 var es_symbol_description = __webpack_require__(1817);
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
-var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(3507);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??ref--14-1!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/components/Profile.vue?vue&type=template&id=66b41794&scoped=true
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(7203);
+;// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js!./node_modules/ts-loader/index.js??ref--15-3!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[4]!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/components/Profile.vue?vue&type=template&id=b4cc6ef4&scoped=true&ts=true
 
 
 
 
 
-(0,external_commonjs_vue_commonjs2_vue_root_Vue_.pushScopeId)("data-v-66b41794");
+var _withScopeId = function _withScopeId(n) {
+  return _pushScopeId("data-v-b4cc6ef4"), n = n(), _popScopeId(), n;
+};
 
 var _hoisted_1 = {
   class: "profile"
@@ -2125,10 +2146,34 @@ var _hoisted_6 = {
   class: "info-title"
 };
 var _hoisted_7 = ["innerHTML"];
-
-(0,external_commonjs_vue_commonjs2_vue_root_Vue_.popScopeId)();
-
+var _hoisted_8 = {
+  class: "info-social"
+};
+var _hoisted_9 = {
+  key: 0
+};
+var _hoisted_10 = ["href"];
+var _hoisted_11 = {
+  key: 1
+};
+var _hoisted_12 = ["href"];
+var _hoisted_13 = {
+  key: 2
+};
+var _hoisted_14 = ["href"];
+var _hoisted_15 = {
+  key: 3
+};
+var _hoisted_16 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_DiscordSvg = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("DiscordSvg");
+
+  var _component_GithubSvg = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("GithubSvg");
+
+  var _component_TwitterSvg = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("TwitterSvg");
+
+  var _component_InstagramSvg = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.resolveComponent)("InstagramSvg");
+
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", _hoisted_1, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_2, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("div", _hoisted_3, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("img", {
     src: $props.image,
     alt: "image",
@@ -2136,12 +2181,47 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 8, _hoisted_4)])]), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("section", _hoisted_5, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("h2", _hoisted_6, (0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)($props.name), 1), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("h3", {
     class: "info-description",
     innerHTML: $props.description
-  }, null, 8, _hoisted_7)])]);
+  }, null, 8, _hoisted_7), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("ul", _hoisted_8, [$setup.discordUrl ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("li", _hoisted_9, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("a", {
+    href: $setup.discordUrl,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(_component_DiscordSvg)], 8, _hoisted_10)])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $setup.githubUrl ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("li", _hoisted_11, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("a", {
+    href: $setup.githubUrl,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(_component_GithubSvg)], 8, _hoisted_12)])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $setup.twitterUrl ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("li", _hoisted_13, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("a", {
+    href: $setup.twitterUrl,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(_component_TwitterSvg)], 8, _hoisted_14)])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $setup.instagramUrl ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("li", _hoisted_15, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementVNode)("a", {
+    href: $setup.instagramUrl,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createVNode)(_component_InstagramSvg)], 8, _hoisted_16)])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)])])]);
 }
-;// CONCATENATED MODULE: ./src/components/Profile.vue?vue&type=template&id=66b41794&scoped=true
+;// CONCATENATED MODULE: ./src/components/Profile.vue?vue&type=template&id=b4cc6ef4&scoped=true&ts=true
 
+;// CONCATENATED MODULE: ./src/assets/discord_logo.svg
+/* harmony default export */ var discord_logo = (__webpack_require__.p + "img/discord_logo.c93a6d20.svg");
+;// CONCATENATED MODULE: ./src/assets/github_logo.svg
+/* harmony default export */ var github_logo = (__webpack_require__.p + "img/github_logo.04be58c1.svg");
+;// CONCATENATED MODULE: ./src/assets/twitter_logo.svg
+/* harmony default export */ var twitter_logo = (__webpack_require__.p + "img/twitter_logo.5ae9f4cf.svg");
+;// CONCATENATED MODULE: ./src/assets/instagram_logo.svg
+/* harmony default export */ var instagram_logo = (__webpack_require__.p + "img/instagram_logo.6ed2cb52.svg");
 ;// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js!./node_modules/ts-loader/index.js??ref--15-3!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/components/Profile.vue?vue&type=script&lang=ts
+
+
+
+
+
 /* harmony default export */ var Profilevue_type_script_lang_ts = ({
+  components: {
+    DiscordSvg: discord_logo,
+    GithubSvg: github_logo,
+    TwitterSvg: twitter_logo,
+    InstagramSvg: instagram_logo
+  },
   props: {
     image: {
       type: String,
@@ -2154,36 +2234,67 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     description: {
       type: String,
       default: ''
+    },
+    social: {
+      type: Object,
+      default: function _default() {}
     }
   },
-  setup: function setup() {
+  setup: function setup(props) {
     var toggle = function toggle() {
       var navEl = document.querySelector('.header-nav');
       navEl.classList.toggle('menu_active');
     };
 
+    var discordUrl = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(function () {
+      var _props$social;
+
+      return (_props$social = props.social) === null || _props$social === void 0 ? void 0 : _props$social.discord;
+    });
+    var githubUrl = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(function () {
+      var _props$social2;
+
+      return (_props$social2 = props.social) === null || _props$social2 === void 0 ? void 0 : _props$social2.github;
+    });
+    var twitterUrl = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(function () {
+      var _props$social3;
+
+      return (_props$social3 = props.social) === null || _props$social3 === void 0 ? void 0 : _props$social3.twitter;
+    });
+    var instagramUrl = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(function () {
+      var _props$social4;
+
+      return (_props$social4 = props.social) === null || _props$social4 === void 0 ? void 0 : _props$social4.instagram;
+    });
     return {
-      toggle: toggle
+      toggle: toggle,
+      discordUrl: discordUrl,
+      githubUrl: githubUrl,
+      twitterUrl: twitterUrl,
+      instagramUrl: instagramUrl
     };
   }
 });
 ;// CONCATENATED MODULE: ./src/components/Profile.vue?vue&type=script&lang=ts
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--10-oneOf-1-0!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??ref--10-oneOf-1-1!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??ref--10-oneOf-1-2!./node_modules/sass-loader/dist/cjs.js??ref--10-oneOf-1-3!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/components/Profile.vue?vue&type=style&index=0&id=66b41794&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--10-oneOf-1-0!./node_modules/@vue/cli-service/node_modules/css-loader/dist/cjs.js??ref--10-oneOf-1-1!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/@vue/cli-service/node_modules/postcss-loader/dist/cjs.js??ref--10-oneOf-1-2!./node_modules/sass-loader/dist/cjs.js??ref--10-oneOf-1-3!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/dist/index.js??ref--1-1!./src/components/Profile.vue?vue&type=style&index=0&id=b4cc6ef4&lang=scss&scoped=true
 // extracted by mini-css-extract-plugin
 
-;// CONCATENATED MODULE: ./src/components/Profile.vue?vue&type=style&index=0&id=66b41794&lang=scss&scoped=true
+;// CONCATENATED MODULE: ./src/components/Profile.vue?vue&type=style&index=0&id=b4cc6ef4&lang=scss&scoped=true
 
+// EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
+var exportHelper = __webpack_require__(3744);
 ;// CONCATENATED MODULE: ./src/components/Profile.vue
 
 
 
 
 ;
-Profilevue_type_script_lang_ts.render = render
-Profilevue_type_script_lang_ts.__scopeId = "data-v-66b41794"
 
-/* harmony default export */ var Profile = (Profilevue_type_script_lang_ts);
+
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(Profilevue_type_script_lang_ts, [['render',render],['__scopeId',"data-v-b4cc6ef4"]])
+
+/* harmony default export */ var Profile = (__exports__);
 ;// CONCATENATED MODULE: ./src/components/profile.ts
 
 

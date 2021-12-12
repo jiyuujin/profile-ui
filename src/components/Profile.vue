@@ -10,14 +10,61 @@
         {{ name }}
       </h2>
       <h3 class="info-description" v-html="description" />
+      <ul class="info-social">
+        <li v-if="discordUrl">
+          <a :href="discordUrl" target="_blank" rel="noopener noreferrer">
+            <DiscordSvg />
+          </a>
+        </li>
+        <li v-if="githubUrl">
+          <a :href="githubUrl" target="_blank" rel="noopener noreferrer">
+            <GithubSvg />
+          </a>
+        </li>
+        <li v-if="twitterUrl">
+          <a :href="twitterUrl" target="_blank" rel="noopener noreferrer">
+            <TwitterSvg />
+          </a>
+        </li>
+        <li v-if="instagramUrl">
+          <a :href="instagramUrl" target="_blank" rel="noopener noreferrer">
+            <InstagramSvg />
+          </a>
+        </li>
+      </ul>
     </section>
   </div>
 </template>
 
 <script lang="ts">
-import { PropType } from 'vue'
+import { computed, PropType } from 'vue'
+
+import DiscordSvg from '../assets/discord_logo.svg'
+import GithubSvg from '../assets/github_logo.svg'
+import TwitterSvg from '../assets/twitter_logo.svg'
+import InstagramSvg from '../assets/instagram_logo.svg'
+
+type SocialProps = {
+  discord?: string
+  github?: string
+  twitter?: string
+  instagram?: string
+}
+
+interface IProfileProps {
+  image: string
+  name: string
+  description: string
+  social: SocialProps
+}
 
 export default {
+  components: {
+    DiscordSvg,
+    GithubSvg,
+    TwitterSvg,
+    InstagramSvg
+  },
   props: {
     image: {
       type: String as PropType<string>,
@@ -30,14 +77,30 @@ export default {
     description: {
       type: String as PropType<string>,
       default: ''
+    },
+    social: {
+      type: Object as PropType<SocialProps>,
+      default: () => {}
     }
   },
-  setup() {
+  setup(props: IProfileProps) {
     const toggle = () => {
       const navEl = document.querySelector('.header-nav')
       navEl.classList.toggle('menu_active')
     }
-    return { toggle }
+    const discordUrl = computed(() => {
+      return props.social?.discord
+    })
+    const githubUrl = computed(() => {
+      return props.social?.github
+    })
+    const twitterUrl = computed(() => {
+      return props.social?.twitter
+    })
+    const instagramUrl = computed(() => {
+      return props.social?.instagram
+    })
+    return { toggle, discordUrl, githubUrl, twitterUrl, instagramUrl }
   }
 }
 </script>

@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import vue from 'rollup-plugin-vue'
 import scss from 'rollup-plugin-scss'
 import typescript from 'rollup-plugin-typescript2'
+import svgToVue from 'rollup-plugin-svg-to-vue'
 
 const plugins = [
   alias({
@@ -24,6 +25,7 @@ const plugins = [
     include: [/\.tsx?$/, /\.vue\?.*?lang=ts/],
     useTsconfigDeclarationDir: true,
   }),
+  svgToVue()
 ]
 
 export default {

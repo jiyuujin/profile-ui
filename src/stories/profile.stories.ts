@@ -17,7 +17,13 @@ export default {
   argTypes: {
     image: { control: 'string' },
     name: { control: 'string' },
-    description: { control: 'string' }
+    description: { control: 'string' },
+    social: {
+      discord: { control: 'string' },
+      github: { control: 'string' },
+      twitter: { control: 'string' },
+      instagram: { control: 'string' }
+    }
   }
 }
 
@@ -42,5 +48,11 @@ export const Primary = Template.bind({})
 Primary.args = {
   image: require('../assets/boeing747.jpg'),
   name: 'soranchu',
-  description: 'Japanese Aviation Photographer 🇯🇵<br>All my own pics, kindly credit me in any reposts 👍🏼'
+  description: 'Japanese Aviation Photographer 🇯🇵<br>All my own pics, kindly credit me in any reposts 👍🏼',
+  social: {
+    discord: 'https://discord.gg/B86cWtfr8U',
+    github: 'https://github.com/jiyuujin',
+    twitter: 'https://twitter.com/jiyuujinlab',
+    instagram: 'https://instagram.com/sarasakoffee'
+  }
 }
